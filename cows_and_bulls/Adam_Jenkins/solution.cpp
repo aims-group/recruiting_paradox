@@ -22,6 +22,8 @@ void bullsAndCows(string &player1, string &player2, map<string, int> &bullsAndCo
     }
   }
 
+  if(cows >= bulls)
+    cows -= bulls;
   bullsAndCowsMap["bulls"] = bulls;
   bullsAndCowsMap["cows"] = cows;
 }
