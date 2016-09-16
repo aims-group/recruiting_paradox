@@ -7,14 +7,10 @@ void bullsAndCows(string &player1, string &player2, map<string, int> &bullsAndCo
 {
   int bulls = 0;
   int cows = 0;
-  for(int i = 0; i < max(player1.size(), player2.size()); i++)
+  for(int i = 0; i < player1.size(); i++)
   {
     if(player1[i] == player2[i])
       bulls++;
-  }
-
-  for(int i = 0; i < player1.size(); i++)
-  {
     for(int j = 0; j < player2.size(); j++)
     {
       if(player1[i] == player2[j])
@@ -30,12 +26,12 @@ void bullsAndCows(string &player1, string &player2, map<string, int> &bullsAndCo
 
 int main()
 {
+  string player1 = "";
+  string player2 = "";
+  char contd = 'Y';
+  map<string, int> bullsAndCowsMap = {{"bulls", 0}, {"cows", 0}};
   while(true)
   {
-    string player1 = "";
-    string player2 = "";
-    char contd = 'Y';
-    map<string, int> bullsAndCowsMap = {{"bulls", 0}, {"cows", 0}};
     cout << "Player 1: The word: ";
     cin >> player1;
     cout << endl;
